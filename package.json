@@ -1,0 +1,47 @@
+{
+  "name": "chrome-extension-react-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate for chrome extension building",
+  "homepage": "http://github.com/darkenvy",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@types/chrome": "^0.0.86",
+    "@types/node": "^12.0.2",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-redux": "^7.0.9",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "copy-webpack-plugin": "^5.0.3",
+    "cross-env": "^5.2.0",
+    "file-loader": "^3.0.1",
+    "path": "^0.12.7",
+    "typescript": "^3.4.5",
+    "webpack": "^4.32.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "scripts": {
+    "start": "yarn build && yarn browsersync",
+    "browsersync": "browser-sync start --files build/ --server build/",
+    "dev": "cross-env NODE_ENV=development webpack --config webpack.config.js --mode=development --watch",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js --mode=development --color -p --progress --hide-modules --display-optimization-bailout",
+    "clean": "rimraf build"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^3.3.0",
+    "preact": "^8.4.2",
+    "preact-compat": "^3.18.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "5.1.1",
+    "redux-saga": "^1.0.3",
+    "reselect": "^4.0.0"
+  }
+}

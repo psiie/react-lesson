@@ -1,0 +1,4 @@
+
+export const SET_COUNTER = 'App/SET_COUNTER';
+export const REDUX_ASYNC = 'App/REDUX_ASYNC';
+export const REDUX_ASYNC_SUCCEEDED = 'App/REDUX_ASYNC_SUCCEEDED';
