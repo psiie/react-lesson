@@ -2,6 +2,7 @@ import { SET_COUNTER, REDUX_ASYNC_SUCCEEDED } from './constants';
 
 export const initialState = {
   counter: 1,
+  cookie: 42,
 };
 
 function reducer(state = initialState, action) {
